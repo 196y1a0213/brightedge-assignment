@@ -1,0 +1,32 @@
+name: Deploy to Digital Ocean
+
+on:
+  push:
+    branches:
+      - main  # Deploy when pushing to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Deploy to Digital Ocean Droplet
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DO_HOST }}
+        username: ${{ secrets.DO_USERNAME }}
+        key: ${{ secrets.DO_SSH_KEY }}
+        port: ${{ secrets.DO_PORT }}
+        script: |
+          cd ${{ secrets.DO_PROJECT_PATH }}
+          git pull origin main
+          composer install --no-dev --optimize-autoloader
+          # Restart PHP-FPM (adjust service name if different)
+          sudo systemctl restart php-fpm || sudo systemctl restart php8.1-fpm || sudo systemctl restart php8.2-fpm || true
+          # Clear any cache if needed
+          rm -rf logs/*.log
+          echo "Deployment completed at $(date)"
+
