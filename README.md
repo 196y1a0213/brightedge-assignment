@@ -2,6 +2,12 @@
 
 A PHP web application that takes any URL and extracts relevant topics from the page content. Built for the Brightedge assignment using custom density analysis.
 
+## 🌐 Live Demo
+
+**Try it now:** https://deepakparihar.dev
+
+The application is deployed and running with automatic deployments via GitHub Actions.
+
 ## Quick Start
 
 Get it running in under a minute:
@@ -321,6 +327,12 @@ If this were going into production or being expanded, here's what I'd add:
 - **Multi-language support**: Currently only works well with English
 
 The foundation is here - modular services, clean architecture, proper error handling. Adding ML/AI on top would be straightforward since `TopicExtractor` is already isolated.
+
+## Deployment
+
+**Live Demo**: https://deepakparihar.dev
+
+The application includes a CI/CD pipeline using **GitHub Actions** (`.github/workflows/deploy.yml`) that automatically deploys code changes on every push to the `main` branch.
 
 ## Notes for Evaluators
 
