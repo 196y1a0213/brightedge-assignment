@@ -1,0 +1,46 @@
+# Composer dependencies
+/vendor/
+composer.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+/logs/
+/storage/logs/
+
+# Cache and temporary files
+/cache/
+/tmp/
+*.cache
+
+# Build files
+/build/
+/dist/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# PHPUnit and testing
+/phpunit.xml
+/.phpunit.result.cache
+/coverage/
+
+# Other
+*.bak
+*.tmp
+
+
+

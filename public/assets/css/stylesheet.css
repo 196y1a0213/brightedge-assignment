@@ -1,0 +1,499 @@
+/* Brightedge Assignment - Page Classifier Styles */
+
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Typography */
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+/* Sections */
+.section {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+/* Code Elements */
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+pre {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    line-height: 1.8;
+}
+
+/* API Endpoints */
+.endpoint {
+    margin: 15px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.method {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+}
+
+.get {
+    background: #28a745;
+}
+
+.post {
+    background: #007bff;
+}
+
+/* Test URLs Section */
+.test-urls {
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #ffc107;
+}
+
+/* Search Bar Styles */
+.search-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    color: white;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: stretch;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    padding: 15px 30px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+    box-sizing: border-box;
+}
+
+.search-button:hover {
+    background: #218838;
+}
+
+.search-button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 20px;
+    display: none;
+}
+
+.results-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+/* Loading Spinner */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Topic Badges */
+.topic-badge {
+    display: inline-block;
+    background: #e7f3ff;
+    color: #0066cc;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.topic-phrase {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Messages */
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f5c6cb;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #c3e6cb;
+}
+
+/* Metadata Display */
+.metadata {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Responsive Design - Mobile Styles */
+@media (max-width: 768px) {
+    /* Base adjustments */
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 24px;
+        padding-bottom: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Search section - stack vertically */
+    .search-section {
+        padding: 20px 15px;
+        margin: 20px 0;
+    }
+
+    .search-section h2 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px;
+        font-size: 16px; /* Prevent zoom on iOS */
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .search-button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Results section */
+    .results-box {
+        padding: 15px;
+    }
+
+    /* Topic badges - smaller on mobile */
+    .topic-badge {
+        padding: 6px 12px;
+        margin: 3px;
+        font-size: 13px;
+    }
+
+    /* Tables - make scrollable */
+    .results-box table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 12px;
+        margin: 15px 0;
+    }
+
+    /* Code blocks */
+    pre {
+        padding: 10px;
+        font-size: 12px;
+        overflow-x: auto;
+    }
+
+    /* Endpoints */
+    .endpoint {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .endpoint pre {
+        font-size: 11px;
+    }
+
+    /* Method badges */
+    .method {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    /* Messages */
+    .success-message,
+    .error-message {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .metadata {
+        padding: 12px;
+        font-size: 13px;
+        word-break: break-word;
+    }
+
+    /* Test URLs */
+    .test-urls {
+        padding: 12px;
+    }
+
+    .test-urls ol {
+        padding-left: 20px;
+    }
+
+    /* Loading spinner */
+    .loading {
+        padding: 30px 10px;
+    }
+
+    /* Page title */
+    .page-title {
+        font-size: 16px;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .search-section {
+        padding: 15px 10px;
+        margin: 15px 0;
+        border-radius: 8px;
+    }
+
+    .search-section h2 {
+        font-size: 18px;
+    }
+
+    .search-section p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .search-form {
+        gap: 10px;
+    }
+
+    .search-input,
+    .search-button {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .topic-badge {
+        padding: 5px 10px;
+        margin: 2px;
+        font-size: 12px;
+    }
+
+    pre {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .endpoint pre {
+        font-size: 10px;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    .search-form {
+        gap: 15px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Make interactive elements more touch-friendly */
+    .search-button,
+    a,
+    .method {
+        min-height: 44px; /* iOS recommended touch target size */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-input {
+        min-height: 44px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .search-section,
+    .search-form {
+        display: none;
+    }
+
+    .results-section {
+        display: block !important;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
